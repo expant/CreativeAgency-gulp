@@ -61,5 +61,5 @@ function serve() {
 }
 
 exports.clear = clear;
-exports.build = series(clear, html, scss);
+exports.build = series(clear, scss, html, img, svg);
 exports.serve = series(clear, scss, html, img, svg, serve);
