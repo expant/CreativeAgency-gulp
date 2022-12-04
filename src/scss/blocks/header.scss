@@ -1,0 +1,13 @@
+@import '../utilities/gl-mixins.scss';
+@import '../elements/buttons/buttons.scss';
+
+.header {
+    @include flex-cont(space-between, center);
+    margin-top: 72px;
+
+    &__logo {
+        @include flex-cont(flex-start, center);
+        gap: 11px;
+    }
+    
+}

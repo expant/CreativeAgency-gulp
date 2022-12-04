@@ -1,0 +1,16 @@
+@import '../../utilities/gl-variables.scss';
+@import './mixins';
+
+h1 {
+    @include gl-text(64px, 87px, 0.01em, $black-color);
+}
+
+h2 {
+    @include gl-text(55px, 75px, 0.003em, $black-color);
+}
+
+.secondary-title {
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #377DFF;
+}

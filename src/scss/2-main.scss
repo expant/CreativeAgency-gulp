@@ -1,0 +1,15 @@
+@import './utilities/gl-variables.scss';
+@import './utilities/gl-mixins.scss';
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.page-wrap {
+    font-family: 'Quicksand', sans-serif;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+

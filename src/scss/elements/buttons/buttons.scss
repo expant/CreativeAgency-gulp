@@ -1,2 +1,6 @@
 @import 'mixins';
-@import 'variables';
+//@import 'variables';    
+
+.button_transparent {
+    @include button_transparent;
+}

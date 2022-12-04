@@ -1,18 +1,21 @@
 @mixin button() {
-    font-size: $font-size-button;
+    font-size: 16px;
     font-weight: 700;
     padding: 12px 50px;
     border: 1px solid #377DFF;
+    border-radius: 24px;
     letter-spacing: 0.01em;
 }
 
 @mixin button_transparent {
     @include button();
+    color: #377DFF;
     background: transparent;
 }
 
-@mixin button_not-transparent() {
+@mixin button_not-transparent {
     @include button();
+    color: #FFFFFF;
     background: #377DFF;
     box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
 }

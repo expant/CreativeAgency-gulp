@@ -22,12 +22,12 @@ function html() {
 }
 
 function scss() {
-    return src('src/scss/**.scss')
-        .pipe(sass()).on('error', sass.logError)
+    return src('src/scss/**/*.scss')
+        .pipe(sass())    //.on('error', sass.logError)
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(csso())
+        //.pipe(csso())
         .pipe(concat('main.css'))
         .pipe(dest('dist'));
 }
@@ -62,4 +62,4 @@ function serve() {
 
 exports.clear = clear;
 exports.build = series(clear, scss, html, img, svg);
-exports.serve = series(clear, scss, html, img, svg, serve);
+exports.serve = series(clear, html, scss, img, svg, serve);
