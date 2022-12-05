@@ -1,0 +1,49 @@
+@import '../mixins/flex';
+@import '../mixins/buttons';
+@import '../mixins/typography';
+
+.start-project {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        left: 326px;
+        top: 242px;
+        background: linear-gradient(180deg, rgba(68, 133, 255, 0.8) 0%, #377DFF 100%);
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    &__text {
+        max-width: 790px;
+        margin: 0 auto;
+        z-index: 100;
+    }
+
+    &__p {
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 32px;
+        p {
+            font-family: "Nunito-Regular", sans-serif;
+            line-height: 29px;
+        }   
+        z-index: 100;
+    }
+
+    &__btn button {
+        @include button_not-transparent;
+        transform: scale(1);
+        transition: all ease-in-out .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

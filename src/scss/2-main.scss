@@ -1,10 +1,15 @@
-@import './utilities/gl-variables.scss';
-@import './utilities/gl-mixins.scss';
+@import './fonts.scss';
+@import './variables.scss';
+@import './mixins/typography';
 
 * {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
+}
+
+body {
+    background: #F5F5F5;
 }
 
 .page-wrap {
@@ -13,3 +18,21 @@
     margin: 0 auto;
 }
 
+h1 {
+    font-family: "Nunito-Bold", sans-serif;
+    @include gl-text(64px, 800, 87px, 0.01em, $black-color);
+}
+
+h2 {
+    @include gl-text(55px, 700, 75px, 0.003em, $black-color);
+}
+
+p {
+    @include gl-text(20px, 400, 32px, 0.01em, #464646); 
+}
+
+.secondary-title {
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #377DFF;
+}

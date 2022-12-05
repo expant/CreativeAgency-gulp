@@ -6,6 +6,7 @@ const csso = require('gulp-csso');
 const fileinclude = require('gulp-file-include');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
+const fonter = require('gulp-fonter');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sync = require('browser-sync').create();
@@ -30,6 +31,15 @@ function scss() {
         //.pipe(csso())
         .pipe(concat('main.css'))
         .pipe(dest('dist'));
+}
+
+function font() {
+   return src('src/assets/fonts/**.ttf')
+    .pipe(fonter({
+        //subset: [66, 67, 68, 69, 70, 71],
+        formats: ['woff', 'ttf']
+    }))
+    .pipe(dest('dist/assets/fonts'))    
 }
 
 function img() {
@@ -62,4 +72,12 @@ function serve() {
 
 exports.clear = clear;
 exports.build = series(clear, scss, html, img, svg);
-exports.serve = series(clear, html, scss, img, svg, serve);
+exports.serve = series(
+    clear, 
+    html, 
+    scss, 
+    font, 
+    img, 
+    svg, 
+    serve
+);

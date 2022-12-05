@@ -51,10 +51,22 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../assets/fonts/Nunito-ExtraBold.ttf") format("opentype"), url("../assets/fonts/Nunito-ExtraBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../assets/fonts/Nunito-Regular.ttf") format("opentype"), url("../assets/fonts/Nunito-Regular.ttf") format("ttf");
+}
 * {
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+body {
+  background: #F5F5F5;
 }
 
 .page-wrap {
@@ -62,43 +74,11 @@ table {
   max-width: 1240px;
   margin: 0 auto;
 }
-.button_transparent {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 12px 50px;
-  border: 1px solid #377DFF;
-  border-radius: 24px;
-  letter-spacing: 0.01em;
-  color: #377DFF;
-  background: transparent;
-}
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 72px;
-}
-.header__logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 11px;
-}
-
-
-.button_transparent {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 12px 50px;
-  border: 1px solid #377DFF;
-  border-radius: 24px;
-  letter-spacing: 0.01em;
-  color: #377DFF;
-  background: transparent;
-}
 h1 {
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 64px;
+  font-weight: 800;
   line-height: 87px;
   letter-spacing: 0.01em;
   color: #1D1D1D;
@@ -106,13 +86,135 @@ h1 {
 
 h2 {
   font-size: 55px;
+  font-weight: 700;
   line-height: 75px;
   letter-spacing: 0.003em;
   color: #1D1D1D;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #464646;
 }
 
 .secondary-title {
   font-size: 24px;
   letter-spacing: 0.01em;
   color: #377DFF;
+}
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../assets/fonts/Nunito-ExtraBold.ttf") format("opentype"), url("../assets/fonts/Nunito-ExtraBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../assets/fonts/Nunito-Regular.ttf") format("opentype"), url("../assets/fonts/Nunito-Regular.ttf") format("ttf");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 67px;
+}
+.header__logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 11px;
+}
+.header__logo .logo__text-item_bold {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.header .nav__item {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #1D1D1D;
+  text-decoration: none;
+  transition: font-weight 0.2s;
+}
+.header .nav__item:hover {
+  font-weight: 700;
+}
+.header .nav__item_active {
+  font-weight: 700;
+}
+.header .button_transparent {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 50px;
+  border: 1px solid #377DFF;
+  border-radius: 24px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: #377DFF;
+  background: transparent;
+  transition: all ease-in-out 0.2s;
+}
+.header .button_transparent:hover {
+  color: #FFFFFF;
+  background: #377DFF;
+}
+.start-project {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.start-project::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  left: 326px;
+  top: 242px;
+  background: linear-gradient(180deg, rgba(68, 133, 255, 0.8) 0%, #377DFF 100%);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  z-index: 1;
+}
+.start-project__text {
+  max-width: 790px;
+  margin: 0 auto;
+  z-index: 100;
+}
+.start-project__p {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 32px;
+  z-index: 100;
+}
+.start-project__p p {
+  font-family: "Nunito-Regular", sans-serif;
+  line-height: 29px;
+}
+.start-project__btn button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 50px;
+  border: 1px solid #377DFF;
+  border-radius: 24px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: #377DFF;
+  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  transform: scale(1);
+  transition: all ease-in-out 0.2s;
+}
+.start-project__btn button:hover {
+  transform: scale(1.1);
 }
