@@ -1,29 +1,44 @@
-@import '../mixins/flex';
-@import '../mixins/buttons';
-@import '../mixins/typography';
+/* mixins */
+@import '../utilities/mixins/flex';
+@import '../utilities/mixins/buttons';
+@import '../utilities/mixins/typography';
+
+/* extends */
+@import '../utilities/extends/pseudo-element';
 
 .start-project {
     position: relative;
     text-align: center;
     margin-bottom: 50px;
-
-    &::before {
-        content: '';
-        position: absolute;
-        width: 31px;
-        height: 31px;
-        left: 326px;
-        top: 242px;
-        background: linear-gradient(180deg, rgba(68, 133, 255, 0.8) 0%, #377DFF 100%);
-        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
-        border-radius: 50%;
-        z-index: 1;
-    }
-    
+ 
     &__text {
         max-width: 790px;
         margin: 0 auto;
+        margin-bottom: 99px;
         z-index: 100;
+
+        &::before {
+            @extend %pseudo-element;
+            left: 326px;
+            top: 242px;
+            background: linear-gradient(180deg, rgba(68, 133, 255, 0.8) 0%, #377DFF 100%);  
+        }
+    
+        &::after {
+            @extend %pseudo-element;
+            right: 216px;
+            top: 96px;
+            background: linear-gradient(180deg, #FF8E8E 0%, #F62424 100%);
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 100;
+
+        &_margin {
+            margin-left: 12px;
+        }
     }
 
     &__p {
@@ -35,6 +50,10 @@
             line-height: 29px;
         }   
         z-index: 100;
+
+        &_margin {
+            margin-left: 6px;
+        }
     }
 
     &__btn button {
@@ -45,5 +64,122 @@
         &:hover {
             transform: scale(1.1);
         }
+    }
+
+    &__img-wrap {
+        position: relative;
+
+        &::before {
+            @extend %pseudo-element;
+            right: 94px;
+            top: -20px;
+            background: linear-gradient(180deg, rgba(68, 133, 255, 0.8) 0%, #377DFF 100%);  
+        }
+    
+        &::after {
+            @extend %pseudo-element;
+            left: 199px;
+            top: 184px;
+            background: linear-gradient(180deg, #FF8E8E 0%, #F62424 100%);
+        }
+
+        .circles:first-child {
+            left: 389px;
+            top: -20px;
+
+            .circles__circle {
+                background-color: #377DFF;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        max-width: 739px;
+        height: 501px;
+        margin: 0 auto;
+        background: #D9D9D9 url('../../assets/imgs/make-your-dream.png') no-repeat center center;
+        border-radius: 50px;
+        z-index: 100;
+    }
+
+    &__points {
+        position: absolute;
+        left: -107px;
+        top: 24px;
+        text-align: left;
+        padding: 15px 30px 22px 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+    }
+
+    &__points-top {
+        margin-bottom: 10px;
+
+        img {
+            vertical-align: middle;
+        }
+
+        .points-top-txt {
+            font-size: 12px;
+            line-height: 15px;
+            color: #1D1D1D;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+    }
+
+    .points-bottom-nbr {
+        font-size: 24px;
+        font-weight: 700;        ;
+        letter-spacing: 0.5px;
+
+        &_bold {
+            font-weight: 800;
+        }
+    }
+
+    &__review {
+        position: absolute;
+        max-width: 166px;
+        bottom: -7px;
+        right: -107px;
+        text-align: left;
+        padding: 27px 20px 25px 21px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+    }
+
+    &__review-author {
+        @include flex-cont(flex-start, center);
+        gap: 10px;
+        margin-bottom: 12px;
+
+        .review-author-avatar {
+            img { vertical-align: middle; }
+        }
+
+        .author-txt-name {
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 12px;    
+            margin-bottom: 2px;   
+        }
+
+        .author-txt-ceo {
+            font-weight: 600;
+            font-size: 6px;
+            line-height: 8px;
+            letter-spacing: 0.01em;
+            opacity: 0.5;
+        }
+    }
+
+    &__review-txt {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;  
     }
 }

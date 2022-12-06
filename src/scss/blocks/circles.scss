@@ -1,0 +1,22 @@
+@import '../utilities/mixins/flex';
+
+.circles {
+    position: absolute;
+    @include flex-cont(flex-start, flex-start);
+    flex-direction: column;
+    gap: 16.64px;
+    z-index: 1;
+
+    &-row {
+        @include flex-cont(flex-start, flex-start);
+        flex-flow: row nowrap;
+        gap: 13.7px;
+    }
+
+    &__circle {
+        width: 5px;
+        height: 5.25px;
+        border-radius: 50%;
+    }
+}
+
