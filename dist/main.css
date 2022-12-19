@@ -86,6 +86,7 @@ h1 {
 }
 
 h2 {
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 55px;
   font-weight: 700;
   line-height: 75px;
@@ -113,6 +114,63 @@ p {
 @font-face {
   font-family: "Nunito-Regular";
   src: url("../assets/fonts/Nunito-Regular.ttf") format("opentype"), url("../assets/fonts/Nunito-Regular.ttf") format("ttf");
+}
+/* mixins */
+.about-us {
+  text-align: center;
+  margin-top: 213px;
+}
+.about-us__content_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 65px;
+}
+.about-us__img-wrap img {
+  border-radius: 24px;
+}
+.about-us__text {
+  text-align: left;
+}
+.about-us__text-p {
+  margin-bottom: 24px;
+}
+.about-us__btn_not-transparent {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 13px 50px;
+  border: 1px solid #377DFF;
+  border-radius: 24px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: #377DFF;
+  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  margin-right: 25px;
+}
+.about-us__btn_transparent {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 13px 50px;
+  border: 1px solid #377DFF;
+  border-radius: 24px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: #377DFF;
+  background: transparent;
+  padding: 10px 50px;
+}
+.about-us__btn_transparent img {
+  vertical-align: middle;
+}
+.about-us__btn_transparent span {
+  vertical-align: middle;
+}
+.about-us .secondary-title {
+  margin-bottom: 20px;
+}
+.about-us__title {
+  margin-bottom: 38px;
 }
 .circles {
   position: absolute;
@@ -277,6 +335,13 @@ p {
 }
 .start-project__img-wrap .circles:first-child .circles__circle {
   background-color: #377DFF;
+}
+.start-project__img-wrap .circles:last-child {
+  left: 425px;
+  bottom: -18px;
+}
+.start-project__img-wrap .circles:last-child .circles__circle {
+  background-color: #F62424;
 }
 .start-project__img {
   position: relative;

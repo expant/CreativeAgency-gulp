@@ -1,0 +1,53 @@
+/* mixins */
+@import '../utilities/mixins/flex';
+@import '../utilities/mixins/buttons';
+@import '../utilities/mixins/typography';
+
+.about-us {
+    text-align: center;
+    margin-top: 213px;
+    &__content_flex {
+        @include flex-cont(space-between, center);
+        gap: 65px;
+    }
+
+    &__img-wrap img {
+        border-radius: 24px;
+    }
+
+    &__text {
+        text-align: left;
+        
+        &-p {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__btn_not-transparent {
+        @include button_not-transparent;
+        margin-right: 25px;
+    }
+
+    &__btn_transparent {
+        @include button_transparent;
+        padding: 10px 50px;
+
+        img {
+            vertical-align: middle;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+    }
+
+    .secondary-title {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 38px;
+    }
+
+
+}

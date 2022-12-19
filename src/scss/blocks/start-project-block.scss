@@ -91,6 +91,15 @@
                 background-color: #377DFF;
             }
         }
+
+        .circles:last-child {
+            left: 425px;
+            bottom: -18px;
+
+            .circles__circle {
+                background-color: #F62424;
+            }
+        }
     }
 
     &__img {
