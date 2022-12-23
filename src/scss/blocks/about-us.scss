@@ -11,8 +11,31 @@
         gap: 65px;
     }
 
-    &__img-wrap img {
-        border-radius: 24px;
+    &__img-wrap {
+        position: relative;
+        img {
+            position: relative;
+            border-radius: 24px;
+            z-index: 1000;
+        }
+    }
+
+    .circles:first-of-type {
+        left: -30px;
+        top: -18px;
+
+        .circles__circle {
+            background-color: #FF5C00;
+        }
+    }
+
+    .circles:last-of-type {
+        right: -38px;
+        bottom: -7px;
+
+        .circles__circle {
+            background-color: #EB00FF;
+        }
     }
 
     &__text {
@@ -38,6 +61,8 @@
 
         span {
             vertical-align: middle;
+            margin-left: 5px;
+            color: #377DFF;
         }
     }
 
