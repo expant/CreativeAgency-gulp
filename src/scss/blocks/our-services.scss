@@ -1,0 +1,91 @@
+/* mixins */
+@import '../utilities/mixins/flex';
+@import '../utilities/mixins/buttons';
+@import '../utilities/mixins/typography';
+
+.our-services {
+    margin-top: 157px;
+    @include flex-cont(space-between, center);
+    gap: 154px;
+    flex: 1;
+
+    &__right-block {
+        @include flex-cont(space-between, center);  
+        flex-flow: column nowrap;  
+        row-gap: 38px;
+        flex: 1;
+
+        .our-services_flex {
+            @include flex-cont(space-between, center);  
+            column-gap: 41px;
+            flex: 1;
+        }
+    }
+
+    &__left-block {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-top: 28px;
+        margin-bottom: 18px;
+    }
+
+    &__btn {
+        
+        text-align: right;
+
+        button {
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 36px;
+            margin-right: -6px;
+            line-height: 34px;
+            letter-spacing: 0.01em;
+            background: transparent;
+            border: transparent;
+            color: #377DFF;
+        }
+
+        img {
+            vertical-align: middle;
+            padding-left: 13px;
+        }
+    }
+
+    
+    .service {
+        @include flex-cont(center, center); 
+        flex-flow: column nowrap; 
+        width: 262px;
+        height: 269px;
+        padding: 35px 47px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+
+        .icon-1 { background-color: #377DFF; }
+        .icon-2 { background-color: #FF2D2D; }
+        .icon-3 { background-color: #7CE761; }
+        .icon-4 { background-color: #FFA800; }
+
+        &__icon {
+            display: inline-block;
+            padding: 29px;
+            border-radius: 50%;
+        }
+
+        &__text {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34px;
+            /* or 142% */    
+            text-align: center;
+            margin-top: 31px;
+            letter-spacing: 0.6px;
+            color: #1D1D1D;
+        }
+    }
+}
