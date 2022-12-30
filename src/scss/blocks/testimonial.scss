@@ -4,5 +4,67 @@
 @import '../utilities/mixins/typography';
 
 .testimonial {
-    
+   text-align: center;
+   margin-top: 192px; 
+
+   &__title {
+        margin-top: 20px;
+        margin-bottom: 50px;
+   }
+
+   &__reviews_flex {
+        @include flex-cont(space-between, center);
+        gap: 50px;
+        
+   }
+
+   &__person_flex {
+        @include flex-cont(flex-start, center);
+        gap: 30px;
+
+        &-txt {
+          margin-bottom: -5px;
+        }
+
+        &-txt-name {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 15px;
+          letter-spacing: 0.01em;
+          color: #377DFF;
+        }
+
+        &-txt-prof {
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 34px;
+          letter-spacing: 0.01em;
+          color: #464646;
+          opacity: 0.5;
+        }
+    }
+
+   &__review {
+        flex: 1;
+        text-align: left;
+        padding: 50px 31px 104px 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+
+        .testimonial__text {
+            margin-top: 25px;
+
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.01em;
+                color: #464646;
+                opacity: 0.8;
+            }
+        }
+   }
+
+
 }
